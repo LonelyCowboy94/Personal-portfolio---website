@@ -12,12 +12,17 @@
 <link rel="icon" href="favicon.png">
   <meta name="author" content="Jokić Nikola">
 </head>
+  
 <body>
   <header id="header">
     <nav id="navbar">
-      <ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+        <a href="#welcome-section" id="home-logo"><img src="favicon.png" alt="logo"> Web Solutions</a>
+      <ul id="navbar-list">
         <li><a href="#welcome-section"><img src="favicon.png" alt="logo"> Web Solutions</a></li>
-        <li><a href="#about-me" id="aboutme">About me</a></li>
+        <li><a href="#about-me">About me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -39,21 +44,27 @@
   <section id="projects">
     <h2 id="projects-title">"Crafted with Code": </h2>
     <div id="projects-flex">
-    <div class="project-tile">
-      <!--TODO: Link those pages to a new addresses when ready-->      
-      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form" target="_blank"><img src="1.png"></a>
+    <div class="project-tile">      
+      <a href="https://lonelycowboy94.github.io/servisni-centar-SILER/#hero" target="_blank"><img src="siler.png" alt="Siler.com"></a>
     </div>
     <div class="project-tile">
-      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page" target="_blank"><img src="2.png"></a>
+      <a href="https://lonelycowboy94.github.io/RPG---Dragon-Repeller/" target="_blank"><img src="dragon.png" alt="Dragon repeller"></a>
     </div>
     <div class="project-tile">
-      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page" target="_blank"><img src="3.png"></a>
+      <a href="https://lonelycowboy94.github.io/Calculator/" target="_blank"><img src="calculator.png" alt="Calculator"></a>
     </div>
     <div class="project-tile">
-      <a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page" target="_blank"><img src="4.png"></a>
+      <a href="https://lonelycowboy94.github.io/Weather-forecast/" target="_blank"><img src="weather.png" alt="Weather-forecast"></a>
+    </div>
+    <div class="project-tile">
+      <a href="https://lonelycowboy94.github.io/product-landing-page/" target="_blank"><img src="landing.png" alt="product-landing-page"></a>
+    </div>
+    <div class="project-tile">
+      <a href="https://lonelycowboy94.github.io/Technical-Documentation-Page/" target="_blank"><img src="technical.png" alt="Technical-Documentation-Page"></a>
     </div>
     </div>
   </section>
+  
   <section id="contact">
     <h2>"Drop a Line, Let’s Build"</h2>
     <h3>Your Next Developer Awaits</h3>
@@ -69,5 +80,19 @@
   <footer>
     <p>© 2025 Nikola Jokić. Crafted with ❤️ and lots of coffee.</p>    
   </footer>
+  
+  <script>
+    document.getElementById("mobile-menu").addEventListener("click", function () {
+      var navbar = document.getElementById("navbar-list");
+      navbar.classList.toggle("active");
+    });
+
+    document.querySelectorAll('#navbar-list a').forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById("navbar-list").classList.remove("active");
+      });
+    });
+  </script>
+  
 </body>
 </html>
